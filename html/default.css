@@ -223,7 +223,68 @@ main{
 }
 /* Tablet & Desktop */
 @media (min-width:768px){
-	
+	.gnb>button{
+		display: none;
+	}
+	.search{
+		position: absolute;
+		top: 20px;
+		right: 10px;
+		margin: 0;
+		width: 200px;
+	}
+	.gnb{
+		margin-bottom: 15px;
+	}
+	.gnb>ul{
+		display: block !important;
+		height: 40px;
+		border-bottom: 40px solid #fff;
+		padding-left: 25px;
+		overflow: visible;
+		background: -webkit-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
+		background: -moz-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
+		background: -ms-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
+		background: -o-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
+		background: linear-gradient(to bottom, #555 0%, #333 50%, #000 50%, #222 100%);
+		/*(#555,#333,#000,#222); (to bottom, #555 0%, #333 33%, #000 66%, #222 100%)
+		to bottom은 최신 버전에서만 사용가능함.. 생략할 시 기본방향은 아래로..*/
+	}
+	.gnb ul ul{ /*.gnb ul>li>ul*/
+		display: none;
+	}
+	.gnb>ul>li{
+		float: left;
+	}
+	.gnb a{
+		background: none !important;
+	}
+	.gnb>ul>li>a{
+		line-height: 40px;
+		padding: 0 25px;
+	}
+	.gnb>ul>.active>a{/*.gnb>ul>li.active>a*/
+		background: #fff !important;
+		color: #000;
+		font-weight: 700;/*font-weight: bold;*/
+		margin-top: 4px;
+		line-height: 36px;
+		border-radius: 4px 4px 0 0;
+	}
+	.gnb>ul>.active>ul{/*.gnb>ul>li.active>ul*/
+		display: block;
+	}
+	.gnb ul ul{
+		position: absolute;
+	}
+	.gnb li li{
+		border: 0;
+		display: inline-block;
+	}
+	.gnb li li>a{
+		color: #666;
+		line-height: 40px;
+	}
 }
 
 /* Tablet */
